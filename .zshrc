@@ -52,3 +52,6 @@ bindkey "^[[3~" delete-char
 
 alias la="ls -la"
 alias ll="ls -l"
+
+alias svn="/opt/local/bin/svn"
+
