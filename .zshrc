@@ -53,5 +53,7 @@ bindkey "^[[3~" delete-char
 alias la="ls -la"
 alias ll="ls -l"
 
+# use macports binaries for selected tools
 alias svn="/opt/local/bin/svn"
+alias git="/opt/local/bin/git"
 
