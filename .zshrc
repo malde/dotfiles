@@ -47,6 +47,7 @@ export M2_HOME=/Users/malte/dev/_tools/apache-maven-3.0.3
 export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
+export LANG=en
 
 bindkey "^[[3~" delete-char
 

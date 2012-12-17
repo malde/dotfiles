@@ -22,3 +22,5 @@
 	st = status
 	co = checkout
 	fe = fetch -v
+[push]
+	default = simple
