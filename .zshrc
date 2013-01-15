@@ -8,14 +8,15 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="jreese"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="nano ~/.zshrc"
+alias zshsource="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -40,8 +41,8 @@ export PATH=$PATH:/Users/malte/dev/_tools/android-sdk-macosx/tools
 export PATH=$PATH:/Users/malte/dev/_tools/sencha-touch-2.0.0-commercial/command
 export PATH=$PATH:/opt/local/bin
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home
-export ANT_HOME=/Users/malte/dev/_tools/apache-ant-1.8.3/bin
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home
+export ANT_HOME=/Users/malte/dev/_tools/apache-ant-1.8.3
 export MAVEN_HOME=/Users/malte/dev/_tools/apache-maven-3.0.3
 export M2_HOME=/Users/malte/dev/_tools/apache-maven-3.0.3
 export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
@@ -58,3 +59,5 @@ alias ll="ls -l"
 alias svn="/opt/local/bin/svn"
 alias git="/opt/local/bin/git"
 
+# simple HTTP server in current folder
+alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
