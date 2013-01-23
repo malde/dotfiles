@@ -55,7 +55,7 @@ alias la="ls -la"
 alias ll="ls -l"
 
 # simple HTTP server in current folder
-alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
+alias servethis="python -m SimpleHTTPServer"
 
 # clean apple download history
 alias cleanup="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
