@@ -63,3 +63,6 @@ alias servethis="python -m SimpleHTTPServer"
 
 # clean apple download history
 alias cleanup="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+# getting rid of duplicates in the Open With submenu
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
