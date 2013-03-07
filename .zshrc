@@ -48,6 +48,7 @@ export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -Df
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export LANG=en_US.UTF-8
+export EDITOR='nano'
 
 bindkey "^[[3~" delete-char
 
