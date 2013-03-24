@@ -36,6 +36,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/Users/malte/dev/_tools/apache-ant-1.8.3/bin
 export PATH=$PATH:/Users/malte/dev/_tools/android-sdk-macosx/tools
 export PATH=$PATH:/Users/malte/dev/_tools/sencha-touch-2.0.0-commercial/command
