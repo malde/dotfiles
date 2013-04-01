@@ -24,3 +24,5 @@
 	fe = fetch -v
 [push]
 	default = current
+[merge]
+	conflictstyle = diff3
