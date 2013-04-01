@@ -1,6 +1,6 @@
 [user]
 	name = Malte Klemke
-	email = m.klemke@monday-consulting.com
+	email = git@malde.me
 [core]
 	autocrlf = false
 	safecrlf = true
@@ -21,6 +21,7 @@
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	st = status
 	co = checkout
+	cm = commit
 	fe = fetch -v
 [push]
 	default = current
