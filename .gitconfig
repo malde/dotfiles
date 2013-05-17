@@ -2,7 +2,7 @@
 	name = Malte Klemke
 	email = git@malde.me
 [core]
-	autocrlf = false
+	autocrlf = input
 	safecrlf = true
 	excludesfile = /Users/malte/.gitignore_global
 	editor = nano
