@@ -30,18 +30,20 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras mvn brew terminalapp emoji-clock colored-man zsh-syntax-highlighting)
+plugins=(git git-extras svn mvn brew terminalapp emoji-clock colored-man zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:/Users/malte/dev/_tools/apache-ant-1.8.3/bin
 export PATH=$PATH:/Users/malte/dev/_tools/android-sdk-macosx
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home
 export ANT_HOME=/Users/malte/dev/_tools/apache-ant-1.8.3
+export M2_HOME=/usr/local/Cellar/maven/3.0.5/libexec
 export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
