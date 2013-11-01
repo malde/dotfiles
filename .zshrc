@@ -33,6 +33,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git git-extras svn mvn brew terminalapp emoji-clock colored-man zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 # Customize to your needs...
 
@@ -43,7 +44,6 @@ export PATH=$PATH:/Users/malte/dev/_tools/android-sdk-macosx
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home
 export ANT_HOME=/Users/malte/dev/_tools/apache-ant-1.8.3
-export M2_HOME=/usr/local/Cellar/maven/3.0.5/libexec
 export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
@@ -67,3 +67,5 @@ alias cleanup="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.Quarantine
 
 # getting rid of duplicates in the Open With submenu
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
+alias gitmonday='git config --local http.sslCAInfo /Users/malte/Documents/_cert/malte/ca.crt && git config --local http.sslKey /Users/malte/Documents/_cert/malte.pem && git config --local http.sslCert /Users/malte/Documents/_cert/malte.crt && git config --local http.sslCertPasswordProtected true && git config --local http.sslVerify false'
