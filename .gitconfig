@@ -31,12 +31,6 @@
 	default = current
 [merge]
 	conflictstyle = diff3
-[http]
-	sslCAInfo = /Users/malte/Documents/_cert/malte/ca.crt
-	sslKey = /Users/malte/Documents/_cert/malte.pem	
-	sslCert = /Users/malte/Documents/_cert/malte.crt
-	sslCertPasswordProtected = true
-	sslVerify = false
 [credential]
 	helper = osxkeychain
 [branch]
