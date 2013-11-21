@@ -28,7 +28,7 @@
 	fe = fetch -v
 	purr = pull --rebase
 [push]
-	default = current
+	default = simple
 [merge]
 	conflictstyle = diff3
 [credential]
