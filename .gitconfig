@@ -6,6 +6,7 @@
 	safecrlf = true
 	excludesfile = /Users/malte/.gitignore_global
 	editor = nano
+	trustctime = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -35,3 +36,7 @@
 	helper = osxkeychain
 [branch]
 	autosetuprebase = always
+[mergetool]
+	keepBackup = true
+[http]
+	sslCert = Malte Klemke

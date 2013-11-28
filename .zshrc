@@ -41,11 +41,11 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:/Users/malte/dev/_tools/apache-ant-1.8.3/bin
 export PATH=$PATH:/Users/malte/dev/_tools/android-sdk-macosx
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home
+export JAVA_6_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home
+export JAVA_HOME=$JAVA_7_HOME
 export ANT_HOME=/Users/malte/dev/_tools/apache-ant-1.8.3
 export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
-export GIT_SSL_CERT="Malte Klemke"
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export LANG=en_US.UTF-8
@@ -59,6 +59,13 @@ alias ll="ls -l"
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
+
+# homebrew
+alias brewup='brew update && brew outdated'
+
+# java home switcher
+alias java6="export JAVA_HOME=$JAVA_6_HOME"
+alias java7="export JAVA_HOME=$JAVA_7_HOME"
 
 # simple HTTP server in current folder
 alias servethis="python -m SimpleHTTPServer"
