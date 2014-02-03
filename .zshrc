@@ -36,8 +36,7 @@ unsetopt correct_all
 
 # Customize to your needs...
 
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
 export PATH=$PATH:/Users/malte/dev/_tools/apache-ant-1.8.3/bin
 export PATH=$PATH:/Users/malte/dev/_tools/android-sdk-macosx
 export JAVA_6_HOME=/System/Library/Frameworks/JavaVM.framework/Home

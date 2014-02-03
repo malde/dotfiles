@@ -30,13 +30,11 @@
 	purr = pull --rebase
 [push]
 	default = simple
-[merge]
-	conflictstyle = diff3
 [credential]
 	helper = osxkeychain
 [branch]
 	autosetuprebase = always
 [mergetool]
 	keepBackup = true
-[http]
+[http "https://git.my-monday-consulting.com"]
 	sslCert = Malte Klemke
