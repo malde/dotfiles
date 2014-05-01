@@ -47,7 +47,7 @@ export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -Df
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export LANG=en_US.UTF-8
-export EDITOR='nano'
+export EDITOR='vi'
 
 bindkey "^[[3~" delete-char
 
@@ -72,4 +72,4 @@ alias servethis="python -m SimpleHTTPServer"
 alias cleanup="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
 # getting rid of duplicates in the Open With submenu
-alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'

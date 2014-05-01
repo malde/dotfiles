@@ -5,7 +5,7 @@
 	autocrlf = input
 	safecrlf = true
 	excludesfile = /Users/malte/.gitignore_global
-	editor = nano
+	editor = vi 
 	trustctime = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -28,6 +28,8 @@
 	ready = rebase -i @{u}
 	fe = fetch -v
 	purr = pull --rebase
+	cdiff = diff --color-words
+	wdiff = diff --word-diff
 [push]
 	default = simple
 [credential]
@@ -38,3 +40,5 @@
 	keepBackup = true
 [http "https://git.my-monday-consulting.com"]
 	sslCert = Malte Klemke
+[pull]
+	rebase = true
