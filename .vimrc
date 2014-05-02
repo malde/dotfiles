@@ -5,4 +5,7 @@ set ignorecase
 set noerrorbells
 set expandtab
 set smarttab
+set number
+set background=dark
+colorscheme ir_black
 syntax enable
