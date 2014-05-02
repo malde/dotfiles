@@ -58,6 +58,10 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
+# editor aliases
+alias vi="vim"
+alias nano="vim"
+
 # homebrew
 alias brewup='brew update && brew outdated'
 
