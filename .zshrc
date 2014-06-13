@@ -40,7 +40,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
 export PATH=$PATH:/Users/malte/dev/_tools/apache-ant-1.8.3/bin
 export PATH=$PATH:/Users/malte/dev/_tools/android-sdk-macosx
 export JAVA_6_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home
 export JAVA_HOME=$JAVA_7_HOME
 export ANT_HOME=/Users/malte/dev/_tools/apache-ant-1.8.3
 export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
