@@ -3,7 +3,7 @@
 	email = git@malde.me
 [core]
 	autocrlf = input
-	safecrlf = true
+	safecrlf = false
 	excludesfile = /Users/malte/.gitignore_global
 	editor = vi 
 	trustctime = false
