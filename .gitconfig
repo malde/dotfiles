@@ -30,6 +30,7 @@
 	purr = pull --rebase
 	cdiff = diff --color-words
 	wdiff = diff --word-diff
+        unpushed = log --stat origin/master..HEAD
 [push]
 	default = simple
 [credential]

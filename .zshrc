@@ -44,6 +44,7 @@ bindkey "^[[3~" delete-char
 alias la="ls -la"
 alias ll="ls -l"
 
+alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
