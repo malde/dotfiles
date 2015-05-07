@@ -4,15 +4,9 @@
 [core]
 	autocrlf = input
 	safecrlf = false
-	excludesfile = /Users/malte/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = vi 
 	trustctime = false
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [color]
 	ui = true
 [help]
@@ -33,12 +27,8 @@
         unpushed = log --stat origin/master..HEAD
 [push]
 	default = simple
-[credential]
-	helper = osxkeychain
 [branch]
 	autosetuprebase = always
-[mergetool]
-	keepBackup = true
 [http "https://git.my-monday-consulting.com"]
 	sslCert = Malte Klemke
 [pull]
