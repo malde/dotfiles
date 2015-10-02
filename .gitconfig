@@ -1,6 +1,6 @@
 [user]
 	name = Malte Klemke
-	email = git@malde.me 
+	email = git@malde.me
 [core]
 	autocrlf = input
 	safecrlf = false
