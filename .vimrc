@@ -7,4 +7,5 @@ set expandtab
 set smarttab
 set number
 set background=dark
+set backspace=indent,eol,start
 syntax enable
