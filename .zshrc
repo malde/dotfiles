@@ -28,7 +28,8 @@ bindkey "^I" expand-or-complete-with-dots
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
-export M2_HOME="/usr/local/Cellar/maven/current/libexec"
+export M3_HOME="/Users/malte/dev/_tools/maven_brew"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_45`
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export LANG=en_US.UTF-8
@@ -36,7 +37,8 @@ export EDITOR='vi'
 
 bindkey "^[[3~" delete-char
 
-launchctl setenv M2_HOME $M2_HOME
+launchctl setenv M2_HOME $M3_HOME
+launchctl setenv M3_HOME $M3_HOME
 
 alias la="ls -la"
 alias ll="ls -l"
