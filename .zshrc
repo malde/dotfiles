@@ -29,7 +29,7 @@ bindkey "^I" expand-or-complete-with-dots
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
 export M3_HOME="/Users/malte/dev/_tools/maven_brew"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_45`
+export JAVA_HOME=`/usr/libexec/java_home`
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export LANG=en_US.UTF-8
@@ -63,3 +63,5 @@ alias cleanup="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.Quarantine
 
 # getting rid of duplicates in the Open With submenu
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
