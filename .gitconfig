@@ -7,6 +7,8 @@
 	excludesfile = /Users/malte/.gitignore_global
 	editor = vi 
 	trustctime = false
+[commit]
+    template = /Users/malte/.gitmessage
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
