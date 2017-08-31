@@ -52,6 +52,9 @@ alias ......='cd ../../../../../'
 alias vi="vim"
 alias nano="vim"
 
+# because I can't type
+alias gut="git"
+
 # homebrew
 alias brewup='brew update && brew outdated'
 
