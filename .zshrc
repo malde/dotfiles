@@ -26,6 +26,7 @@ bindkey "^I" expand-or-complete-with-dots
 
 # Customize to your needs...
 
+export TERM=xterm-256color
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
 export M3_HOME="/Users/malte/dev/_tools/maven_brew"
@@ -68,3 +69,18 @@ alias cleanup="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.Quarantine
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# fzf via Homebrew
+if [ -e /usr/local/opt/fzf/shell/completion.zsh ]; then
+  source /usr/local/opt/fzf/shell/key-bindings.zsh
+  source /usr/local/opt/fzf/shell/completion.zsh
+fi
+
+# fzf + ag configuration
+export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='
+--color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
+--color info:108,prompt:109,spinner:108,pointer:168,marker:168
+'
