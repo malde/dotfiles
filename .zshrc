@@ -33,7 +33,8 @@ export M3_HOME="/Users/malte/dev/_tools/maven_brew"
 export JAVA_HOME=`/usr/libexec/java_home`
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
-export LANG=en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 export EDITOR='vi'
 
 bindkey "^[[3~" delete-char
