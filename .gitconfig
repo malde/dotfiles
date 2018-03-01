@@ -1,6 +1,12 @@
 [user]
 	name = Malte Klemke
 	email = git@malde.me
+[includeIf "gitdir:/Users/malte/dev/MWF/"]
+	path = /Users/malte/.gitconfig_monday
+[includeIf "gitdir:/Users/malte/dev/GDV/"]
+    path = /Users/malte/.gitconfig_monday
+[includeIf "gitdir:/Users/malte/dev/monday_**"]
+    path = /Users/malte/.gitconfig_monday
 [core]
 	autocrlf = input
 	safecrlf = false
@@ -29,7 +35,7 @@
 	cm = commit
 	ready = rebase -i @{u}
 	fe = fetch -v
-        undo = reset HEAD~1 --mixed
+    undo = reset HEAD~1 --mixed
 	purr = pull --rebase
 	cdiff = diff --color-words
 	wdiff = diff --word-diff
