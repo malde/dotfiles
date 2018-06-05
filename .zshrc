@@ -28,9 +28,10 @@ bindkey "^I" expand-or-complete-with-dots
 
 export TERM=xterm-256color
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
+export PATH=$PATH:/Users/malte/Applications/SenchaCmd
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
 export M3_HOME="/Users/malte/dev/_tools/maven_brew"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_161`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_172`
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export LANG="en_US.UTF-8"
