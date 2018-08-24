@@ -31,7 +31,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
 export PATH=$PATH:/Users/malte/Applications/SenchaCmd
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
 export M3_HOME="/Users/malte/dev/_tools/maven_brew"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_172`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export LANG="en_US.UTF-8"
@@ -58,14 +58,21 @@ alias nano="vim"
 # because I can't type
 alias gut="git"
 
+# node version manager stuff
+export NVM_DIR="/Users/malte/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
 # homebrew (cask) update function
 brewup() {
     brew update &&
+    { echo '' } &&
     { echo outdated brews: } &&
     brew outdated &&
+    { echo '' } &&
     { echo outdated casks: } &&
     brew cask outdated &&
-    { echo update brews or casks with brew upgrade OR brew cask upgrade }
+    { echo '' } &&
+    { echo update brews or casks with brew upgrade AND/OR brew cask upgrade }
 }
 
 # simple HTTP server in current folder
