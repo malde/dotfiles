@@ -58,6 +58,12 @@ alias nano="vim"
 # because I can't type
 alias gut="git"
 
+# some improved default commands
+alias cat="bat"
+alias ping="prettyping --nolegend"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias help="tldr"
+
 # node version manager stuff
 export NVM_DIR="/Users/malte/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
@@ -65,14 +71,11 @@ export NVM_DIR="/Users/malte/.nvm"
 # homebrew (cask) update function
 brewup() {
     brew update &&
-    { echo '' } &&
-    { echo outdated brews: } &&
+    { echo '\noutdated brews:' } &&
     brew outdated &&
-    { echo '' } &&
-    { echo outdated casks: } &&
+    { echo '\noutdated casks:' } &&
     brew cask outdated &&
-    { echo '' } &&
-    { echo update brews or casks with brew upgrade AND/OR brew cask upgrade }
+    { echo '\nupdate brews or casks with brew upgrade AND/OR brew cask upgrade' }
 }
 
 # simple HTTP server in current folder
