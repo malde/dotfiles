@@ -28,7 +28,7 @@
 [alias]
 	ll = log --pretty=format:'%Cred%h%C(yellow)%d %Creset%s %Cgreen(%cr) %C(bold blue) <%cn>' --decorate --numstat
 	ls = log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --all
-	standup = log --since yesterday --author 'Malte Klemke' --pretty=short
+	standup = !git log --since yesterday --author ${1-$(git config user.email)} --pretty=short
 	st = status -sb
 	ignored = ls-files --others --i --exclude-standard
 	co = checkout
