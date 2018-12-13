@@ -46,6 +46,7 @@ launchctl setenv M3_HOME $M3_HOME
 alias la="ls -la"
 alias ll="ls -l"
 
+alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
