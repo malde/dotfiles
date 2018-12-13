@@ -51,6 +51,8 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
+alias dc="docker-compose"
+
 # editor aliases
 alias vi="vim"
 alias nano="vim"
@@ -76,9 +78,11 @@ brewup() {
     brew cask outdated &&
     { echo '\nupdate brews or casks with brew upgrade AND/OR brew cask upgrade' }
 }
+# homebrew command not found
+if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
 
-# simple HTTP server in current folder
-alias servethis="python -m SimpleHTTPServer"
+# start Chrome without cert-checks
+alias devchrome="open -a Google\ Chrome --args --ignore-certificate-errors --user-data-dir"
 
 # clean apple download history
 alias cleanup="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"

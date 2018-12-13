@@ -28,13 +28,12 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'history' \
-  'directory' \
   'spectrum' \
   'utility' \
   'completion' \
+  'command-not-found' \
   'contrib-prompt' \
   'prompt' \
-  'git' \
   'autosuggestions' \
   'history-substring-search' 
 
