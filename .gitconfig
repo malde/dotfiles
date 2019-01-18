@@ -1,60 +1,60 @@
 [user]
-	name = Malte Klemke
-	email = git@malde.me
+    name = Malte Klemke
+    email = git@malde.me
 [includeIf "gitdir:/Users/malte/dev/MWF/"]
-	path = /Users/malte/.gitconfig_monday
+    path = /Users/malte/.gitconfig_monday
 [includeIf "gitdir:/Users/malte/dev/GDV/"]
     path = /Users/malte/.gitconfig_monday
 [includeIf "gitdir:/Users/malte/dev/monday_**"]
     path = /Users/malte/.gitconfig_monday
 [core]
-	autocrlf = input
-	safecrlf = false
-	excludesfile = /Users/malte/.gitignore_global
-	editor = vi 
-	trustctime = false
+    autocrlf = input
+    safecrlf = false
+    excludesfile = /Users/malte/.gitignore_global
+    editor = vi 
+    trustctime = false
 [commit]
     template = /Users/malte/.gitmessage
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
 [color]
-	ui = true
+    ui = true
 [help]
-	autocorrect = 1
+    autocorrect = 1
 [alias]
-	ll = log --pretty=format:'%Cred%h%C(yellow)%d %Creset%s %Cgreen(%cr) %C(bold blue) <%cn>' --decorate --numstat
-	ls = log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --all
-	standup = !git log --since yesterday --author ${1-$(git config user.email)} --pretty=short
-	st = status -sb
-	ignored = ls-files --others --i --exclude-standard
-	co = checkout
-	cm = commit
-	ready = rebase -i @{u}
-	fe = fetch -v
+    ll = log --pretty=format:'%Cred%h%C(yellow)%d %Creset%s %Cgreen(%cr) %C(bold blue) <%cn>' --decorate --numstat
+    ls = log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --all
+    standup = !git log --since yesterday --author ${1-$(git config user.email)} --pretty=short
+    st = status -sb
+    ignored = ls-files --others --i --exclude-standard
+    co = checkout
+    cm = commit
+    ready = rebase -i @{u}
+    fe = fetch -v
     undo = reset HEAD~1 --mixed
-	purr = pull --rebase
-	cdiff = diff --color-words
-	wdiff = diff --word-diff
-        unpushed = log --stat origin/master..HEAD
+    purr = pull --rebase
+    cdiff = diff --color-words
+    wdiff = diff --word-diff
+    unpushed = log --stat origin/master..HEAD
 [push]
-	default = simple
+    default = simple
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [mergetool]
-	keepBackup = true
+    keepBackup = true
 [pull]
-	rebase = true
+    rebase = true
 [pager]
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX 
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+    process = git-lfs filter-process

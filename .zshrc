@@ -69,6 +69,17 @@ alias help="tldr"
 # node version manager stuff
 export NVM_DIR="/Users/malte/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  elif [[ $(nvm version) != $(nvm version default)  ]]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
 # homebrew (cask) update function
 brewup() {
@@ -81,6 +92,8 @@ brewup() {
 }
 # homebrew command not found
 if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
+# homebrew options
+export HOMEBREW_INSTALL_CLEANUP=1
 
 # start Chrome without cert-checks
 alias devchrome="open -a Google\ Chrome --args --ignore-certificate-errors --user-data-dir"
