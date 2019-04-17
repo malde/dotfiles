@@ -33,7 +33,6 @@ export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
 export M3_HOME="/Users/malte/dev/_tools/maven_brew"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CLICOLOR=1
-export GREP_OPTIONS='--color=auto'
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR='vi'
@@ -60,6 +59,8 @@ alias nano="vim"
 
 # because I can't type
 alias gut="git"
+
+alias grep='grep --color=auto'
 
 # some improved default commands
 alias ping="prettyping --nolegend"
