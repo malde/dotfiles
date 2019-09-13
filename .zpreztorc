@@ -35,6 +35,7 @@ zstyle ':prezto:load' pmodule \
   'contrib-prompt' \
   'prompt' \
   'autosuggestions' \
+  'syntax-highlighting' \
   'history-substring-search' 
 
 #
@@ -125,13 +126,13 @@ zstyle ':prezto:module:prompt' theme 'spaceship'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'cursor' \
-#   'root'
-#
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+   'cursor' \
+   'root'
+
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
 #   'builtin' 'bg=blue' \
