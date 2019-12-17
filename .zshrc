@@ -30,7 +30,6 @@ export TERM=xterm-256color
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
 export PATH=$PATH:/Users/malte/Applications/SenchaCmd
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
-export M3_HOME="/Users/malte/dev/_tools/maven_brew"
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export CLICOLOR=1
 export LANG="en_US.UTF-8"
@@ -38,9 +37,6 @@ export LC_ALL="en_US.UTF-8"
 export EDITOR='vi'
 
 bindkey "^[[3~" delete-char
-
-launchctl setenv M2_HOME $M3_HOME
-launchctl setenv M3_HOME $M3_HOME
 
 alias la="ls -la"
 alias ll="ls -l"
@@ -124,3 +120,5 @@ export FZF_DEFAULT_OPTS='
 --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
 --color info:108,prompt:109,spinner:108,pointer:168,marker:168
 '
+
+eval "$(starship init zsh)"

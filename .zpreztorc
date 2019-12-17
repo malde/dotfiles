@@ -32,7 +32,6 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'command-not-found' \
-  'contrib-prompt' \
   'prompt' \
   'autosuggestions' \
   'syntax-highlighting' \
@@ -94,7 +93,7 @@ zstyle ':completion:*:default' list-colors ''
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'spaceship'
+# zstyle ':prezto:module:prompt' theme 'pure'
 
 #
 # Ruby

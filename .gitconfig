@@ -1,9 +1,7 @@
 [user]
     name = Malte Klemke
     email = git@malde.me
-[includeIf "gitdir:/Users/malte/dev/MWF/"]
-    path = /Users/malte/.gitconfig_monday
-[includeIf "gitdir:/Users/malte/dev/GDV/"]
+[includeIf "gitdir:/Users/malte/dev/webforms/"]
     path = /Users/malte/.gitconfig_monday
 [includeIf "gitdir:/Users/malte/dev/monday_**"]
     path = /Users/malte/.gitconfig_monday
