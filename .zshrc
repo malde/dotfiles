@@ -27,8 +27,8 @@ bindkey "^I" expand-or-complete-with-dots
 # Customize to your needs...
 
 export TERM=xterm-256color
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin
-export PATH=$PATH:/Users/malte/Applications/SenchaCmd
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin"
+export PATH="$PATH:/Users/malte/Applications/SenchaCmd"
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export CLICOLOR=1
@@ -57,6 +57,9 @@ alias nano="vim"
 alias gut="git"
 
 alias grep='grep --color=auto'
+
+# maven via mvnvm
+alias mvn='mvn --mvn-version 3.6.3'
 
 # coreutils
 alias readlink="greadlink"

@@ -1,5 +1,5 @@
 [user]
-    name = Malte Klemke
+    name = malde
     email = git@malde.me
 [includeIf "gitdir:/Users/malte/dev/webforms/"]
     path = /Users/malte/.gitconfig_monday
@@ -24,8 +24,9 @@
 [help]
     autocorrect = 1
 [alias]
-    ll = log --pretty=format:'%Cred%h%C(yellow)%d %Creset%s %Cgreen(%cr) %C(bold blue) <%cn>' --decorate --numstat
-    ls = log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --all
+    ll = "!git log --pretty=format:'%Cred%h%C(yellow)%d %Creset%s %Cgreen(%cr) %C(bold blue) <%cn>' --decorate --numstat"
+    ls = "!git log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --all"
+    lsc = "!git log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --first-parent \"$(git branch --show-current)\""
     standup = !git log --since yesterday --author ${1-$(git config user.email)} --pretty=short
     st = status -sb
     ignored = ls-files --others --i --exclude-standard
@@ -35,9 +36,6 @@
     fe = fetch -v
     undo = reset HEAD~1 --mixed
     purr = pull --rebase
-    cdiff = diff --color-words
-    wdiff = diff --word-diff
-    unpushed = log --stat origin/master..HEAD
 [push]
     default = simple
 [credential]
