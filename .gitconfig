@@ -1,6 +1,7 @@
 [user]
     name = malde
     email = git@malde.me
+    signingkey = 721259D4C05AE2A12C8E947BFCAC27415A57DADB
 [includeIf "gitdir:/Users/malte/dev/webforms/"]
     path = /Users/malte/.gitconfig_monday
 [includeIf "gitdir:/Users/malte/dev/monday_**"]
@@ -13,12 +14,6 @@
     trustctime = false
 [commit]
     template = /Users/malte/.gitmessage
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path = 
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
 [color]
     ui = true
 [help]
@@ -26,14 +21,14 @@
 [alias]
     ll = "!git log --pretty=format:'%Cred%h%C(yellow)%d %Creset%s %Cgreen(%cr) %C(bold blue) <%cn>' --decorate --numstat"
     ls = "!git log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --all"
-    lsc = "!git log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --first-parent \"$(git branch --show-current)\""
+    lsc = "!git log --pretty=format:'%Cred%h%C(yellow)%d -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph"
     standup = !git log --since yesterday --author ${1-$(git config user.email)} --pretty=short
     st = status -sb
     ignored = ls-files --others --i --exclude-standard
     co = checkout
     cm = commit
     ready = rebase -i @{u}
-    fe = fetch -v
+    fe = fetch -v -p
     undo = reset HEAD~1 --mixed
     purr = pull --rebase
 [push]
