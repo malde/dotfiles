@@ -30,7 +30,7 @@ export TERM=xterm-256color
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin"
 export PATH="$PATH:/Users/malte/Applications/SenchaCmd"
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
-export JAVA_HOME=`/usr/libexec/java_home -v 11`
+export JAVA_HOME=`/usr/libexec/java_home -v 14`
 export CLICOLOR=1
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -48,6 +48,7 @@ alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
 alias dc="docker-compose"
+alias k="kubectl"
 
 # editor aliases
 alias vi="vim"
@@ -89,17 +90,12 @@ brewup() {
     brew update &&
     { echo '\noutdated brews:' } &&
     brew outdated &&
-    { echo '\noutdated casks:' } &&
-    brew cask outdated &&
-    { echo '\nupdate brews or casks with brew upgrade AND/OR brew cask upgrade' }
+    { echo '\nupdate brews or casks with brew upgrade' }
 }
 # homebrew command not found
 if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
 # homebrew options
 export HOMEBREW_INSTALL_CLEANUP=1
-
-# start Chrome without cert-checks
-alias devchrome="open -a Google\ Chrome --args --ignore-certificate-errors --user-data-dir"
 
 # clean apple download history
 alias cleanup="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
@@ -123,5 +119,8 @@ export FZF_DEFAULT_OPTS='
 --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
 --color info:108,prompt:109,spinner:108,pointer:168,marker:168
 '
+
+# kubernetes autocompletion
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 eval "$(starship init zsh)"
