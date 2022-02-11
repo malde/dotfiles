@@ -29,12 +29,17 @@ bindkey "^I" expand-or-complete-with-dots
 export TERM=xterm-256color
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin"
 export PATH="$PATH:/Users/malte/Applications/SenchaCmd"
+export PATH="$PATH:$HOME/.krew/bin"
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
-export JAVA_HOME=`/usr/libexec/java_home -v 14`
+export JAVA_HOME=`/usr/libexec/java_home -v 17`
+export QMK_HOME="/Users/malte/dev/keeb/qmk_firmware"
 export CLICOLOR=1
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR='vi'
+# ruby stuff
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+eval "$(rbenv init -)"
 
 bindkey "^[[3~" delete-char
 
@@ -47,7 +52,9 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
+alias g="git"
 alias dc="docker-compose"
+alias d="docker"
 alias k="kubectl"
 
 # editor aliases
@@ -60,7 +67,17 @@ alias gut="git"
 alias grep='grep --color=auto'
 
 # maven via mvnvm
-alias mvn='mvn --mvn-version 3.6.3'
+export MVN_VERSION=3.8.3
+alias mvn="mvn --mvn-version $MVN_VERSION"
+alias mvnDebug="mvnDebug --mvn-version $MVN_VERSION"
+
+# jdk switcher
+alias jdk8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`"
+alias jdk11="export JAVA_HOME=`/usr/libexec/java_home -v 11`"
+alias jdk17="export JAVA_HOME=`/usr/libexec/java_home -v 17`"
+
+# gimmicks
+alias serve="python3 -m http.server"
 
 # coreutils
 alias readlink="greadlink"
@@ -85,13 +102,7 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-# homebrew (cask) update function
-brewup() {
-    brew update &&
-    { echo '\noutdated brews:' } &&
-    brew outdated &&
-    { echo '\nupdate brews or casks with brew upgrade' }
-}
+alias brewup="brew upgrade"
 # homebrew command not found
 if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
 # homebrew options
