@@ -1,11 +1,11 @@
 [user]
     name = malde
     email = git@malde.me
-	signingKey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCoXx/2Pqexx07czVRH5uJQ3OPXsIvSwn02tnSKz7BrsQdvyuSqy5r0KmyJjodqadj1Q8OnO7KaXs0YtEuixg4oWX1DjoPYMDemDP9XAE5J3SRDWmMUNZpDLh1JlBMYNS9wZZi+6p3i++Db61uB3iGxnvUadoCY/QcT3p+1L+mWnGxYzx3+b8xGyD/pLawF4VR5grqlxWLRYUc4MhtUOUJHdiqaBtlooD2dj9XKl/jzC942nFX68EEk4HlFG01baIsvtVpp0C4Ne7Xv8UUCgmWAAtswQer1skubh7zPb6tN7e5crrZTbKDR3SxK3p9Z+uDnieceK11aIProCrICg0yBXFSkzTBUo8bReVG2cckiA6v3EmD4BSbsOX1/+hgBLCcFrc3cj2sp6a2atkUggxuyGAW6Ea4qFecgv9EJGcn/rki71f31LvC8ypA3Ck+qBOmF/lvfrvQ5tsuyS5joBifpySDmg8i4+f66ps1dZKeJ2Vryfesnx64plNP2XJWrO4FpFQfJzjzG4jqYjjwCuDOcJ4iElqF5HzNjE+xYT8IaFHiDBRGehirCnF1wdyIcs5wpFTjlwuIyDEk3ekIgLPyaWUHOVLdPAhJqQ50gJSstPPUxnnGrsD53ZuAENmqDmLt6pZ/0JdKnwYzw8II4vRoWEDexsNdHbyvWfwIpB0U5Ew==
+	signingKey = ~/.ssh/id_rsa.pub
 [includeIf "gitdir:/Users/malte/dev/webforms/"]
-    path = /Users/malte/.gitconfig_monday
+    path = /Users/malte/.gitconfig_formcentric
 [includeIf "gitdir:/Users/malte/dev/formcentric/"]
-    path = /Users/malte/.gitconfig_monday
+    path = /Users/malte/.gitconfig_formcentric
 [includeIf "gitdir:/Users/malte/dev/monday_**"]
     path = /Users/malte/.gitconfig_monday
 [core]
