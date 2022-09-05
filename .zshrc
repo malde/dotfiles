@@ -5,9 +5,12 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# zsh-autosuggestions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
 fi
 
 # Disable autocorrect guesses. Happens when typing a wrong
@@ -31,7 +34,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/usr/sbin:/sbin"
 export PATH="$PATH:/Users/malte/Applications/SenchaCmd"
 export PATH="$PATH:$HOME/.krew/bin"
 export MAVEN_OPTS="-Xms512m -Xmx2048m -Dfile.encoding=UTF-8"
-export JAVA_HOME=`/usr/libexec/java_home -v 17`
+export JAVA_HOME=`/usr/libexec/java_home -v 18`
 export QMK_HOME="/Users/malte/dev/keeb/qmk_firmware"
 export CLICOLOR=1
 export LANG="en_US.UTF-8"
@@ -52,10 +55,13 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
+# dev tools
 alias g="git"
-alias dc="docker-compose"
+alias dc="docker compose"
 alias d="docker"
 alias k="kubectl"
+alias p="pnpm"
+alias m="mvn"
 
 # editor aliases
 alias vi="vim"
@@ -67,7 +73,7 @@ alias gut="git"
 alias grep='grep --color=auto'
 
 # maven via mvnvm
-export MVN_VERSION=3.8.3
+export MVN_VERSION=3.8.5
 alias mvn="mvn --mvn-version $MVN_VERSION"
 alias mvnDebug="mvnDebug --mvn-version $MVN_VERSION"
 
@@ -130,8 +136,11 @@ export FZF_DEFAULT_OPTS='
 --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
 --color info:108,prompt:109,spinner:108,pointer:168,marker:168
 '
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # kubernetes autocompletion
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(starship init zsh)"

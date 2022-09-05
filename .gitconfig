@@ -6,7 +6,9 @@
     path = /Users/malte/.gitconfig_formcentric
 [includeIf "gitdir:/Users/malte/dev/formcentric/"]
     path = /Users/malte/.gitconfig_formcentric
-[includeIf "gitdir:/Users/malte/dev/monday_**"]
+[includeIf "gitdir:/Users/malte/dev/moin/"]
+    path = /Users/malte/.gitconfig_monday
+[includeIf "gitdir:/Users/malte/dev/monday/"]
     path = /Users/malte/.gitconfig_monday
 [core]
     autocrlf = input
@@ -54,3 +56,5 @@
 	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = /Users/malte/.ssh/allowed_signers
+[init]
+	defaultBranch = main
